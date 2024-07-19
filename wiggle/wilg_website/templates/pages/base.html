@@ -4,25 +4,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}WILG{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'wilg_website/css/dist/styles.css' %}">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'about' %}">about</a></li>
-                <li><a href="{% url 'house' %}">house</a></li>
-                <li><a href="{% url 'rush' %}">rush</a></li>
-                <li><a href="{% url 'home' %}">wilg</a></li>
-                <li><a href="{% url 'summer' %}">summer</a></li>
-                <li><a href="{% url 'alumnae' %}">alumnae</a></li>
-                <li><a href="{% url 'login' %}">login</a></li>
-
-            </ul>
-        </nav>
+    <header class="py-4">
+        <div class="flex">
+            <div class="flex-1 flex justify-center mr-auto">
+                <a href=" {% url 'about' %}" class="mx-2">about</a>
+                <a href="{% url 'house' %}" class="mx-2">house</a>
+                <a href="{% url 'rush' %}" class="mx-2">rush</a>
+            </div>
+            <div class="mx-12">
+                <a href="{% url 'home' %}">wilg</a>
+            </div>
+            <div class="flex-1 flex justify-center ml-auto">
+                <a href="{% url 'summer' %}" class="mx-2">summer</a>
+                <a href="{% url 'alumnae' %}" class="mx-2">alumnae</a>
+                <a href="{% url 'login' %}" class="mx-2">login</a>
+            </div>
+        </div>
     </header>
 
     <main>

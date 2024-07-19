@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss build wilg_website/static/wilg_website/css/styles.css -o wilg_website/static/wilg_website/css/dist/styles.css"
+    "build": "tailwindcss -i wilg_website/static/wilg_website/css/styles.css -o wilg_website/static/wilg_website/css/dist/styles.css"
   },
   "keywords": [],
   "author": "",
