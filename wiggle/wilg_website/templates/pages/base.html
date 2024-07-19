@@ -4,19 +4,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Personal Website{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}WILG{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'wilg_website/css/dist/styles.css' %}">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">about</a></li>
+                <li><a href="{% url 'house' %}">house</a></li>
+                <li><a href="{% url 'rush' %}">rush</a></li>
+                <li><a href="{% url 'home' %}">wilg</a></li>
+                <li><a href="{% url 'summer' %}">summer</a></li>
+                <li><a href="{% url 'alumnae' %}">alumnae</a></li>
+                <li><a href="{% url 'login' %}">login</a></li>
+
             </ul>
         </nav>
     </header>
@@ -27,7 +31,18 @@
     </main>
 
     <footer>
-        &copy; 2024 Personal Website
+        <hr>
+        <p>Women's Independent Living Group</p>
+        <p>355 Massachusetts Ave, Cambridge, MA 02139</p>
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com/wilg.mit">wilg-stagram</a></li>
+                <li><a href="mailto:wilg-rush-chairs@mit.edu">wilg-mail</a></li>
+            </ul>
+        </nav>
+        <p>
+            &copy; 2024 Lucy Kim
+        </p>
     </footer>
 </body>
 
