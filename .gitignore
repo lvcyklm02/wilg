@@ -1,4 +1,4 @@
 wilg_venv/
-wiggle/myapp/migrations/
+wiggle/wilg_website/migrations/
 __pycache__/
 .DS_Store
