@@ -1,3 +1,5 @@
+{% load static %}
+
 <!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -6,48 +8,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}WILG{% endblock %}</title>
-    {% load static %}
     <link rel="stylesheet" href="{% static 'wilg_website/css/dist/styles.css' %}">
 </head>
 
 <body>
-    <header class="py-4">
-        <div class="flex">
-            <div class="flex-1 flex justify-center mr-auto">
-                <a href=" {% url 'about' %}" class="mx-2">about</a>
-                <a href="{% url 'house' %}" class="mx-2">house</a>
-                <a href="{% url 'rush' %}" class="mx-2">rush</a>
+    <div class="container w-3/4 mx-auto">
+        <header class="py-4">
+            <div class="flex">
+                <div class="flex-1 flex justify-center items-end mr-auto mb-4">
+                    <a href=" {% url 'about' %}"
+                        class="mx-2 hover:text-wilg-purple hover:underline min-w-24 text-center">about</a>
+                    <a href="{% url 'house' %}"
+                        class="mx-2 hover:text-wilg-purple hover:underline min-w-24 text-center">house</a>
+                    <a href="{% url 'rush' %}"
+                        class="mx-2 hover:text-wilg-purple hover:underline min-w-24 text-center">rush</a>
+                </div>
+                <div class="mx-12 flex items-end justify-center">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'wilg_website/images/icons/logo.png' %}" alt="wilg logo" width="300">
+                    </a>
+                </div>
+                <div class="flex-1 flex justify-center items-end ml-auto mb-4">
+                    <a href="{% url 'summer' %}"
+                        class="mx-2 hover:text-wilg-purple hover:underline min-w-24 text-center">summer</a>
+                    <a href="{% url 'alumnae' %}"
+                        class="mx-2 hover:text-wilg-purple hover:underline min-w-24 text-center">alumnae</a>
+                    <a href="{% url 'login' %}"
+                        class="mx-2 hover:text-wilg-purple hover:underline min-w-24 text-center">login</a>
+                </div>
             </div>
-            <div class="mx-12">
-                <a href="{% url 'home' %}">wilg</a>
-            </div>
-            <div class="flex-1 flex justify-center ml-auto">
-                <a href="{% url 'summer' %}" class="mx-2">summer</a>
-                <a href="{% url 'alumnae' %}" class="mx-2">alumnae</a>
-                <a href="{% url 'login' %}" class="mx-2">login</a>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+        <main>
 
-    <footer>
-        <hr>
-        <p>Women's Independent Living Group</p>
-        <p>355 Massachusetts Ave, Cambridge, MA 02139</p>
-        <nav>
-            <ul>
-                <li><a href="https://www.instagram.com/wilg.mit">wilg-stagram</a></li>
-                <li><a href="mailto:wilg-rush-chairs@mit.edu">wilg-mail</a></li>
-            </ul>
-        </nav>
-        <p>
-            &copy; 2024 Lucy Kim
-        </p>
-    </footer>
+            <body>
+                {% block content %}
+                {% endblock %}
+            </body>
+        </main>
+
+        <footer class="flex flex-col items-center">
+            <hr class="w-full">
+            <p class="py-4">Women's Independent Living Group</p>
+            <p class="py-4">355 Massachusetts Ave, Cambridge, MA 02139</p>
+            <nav class="py-4">
+                <ul class="flex justify-center items-center">
+                    <li class="mx-4">
+                        <a href="https://www.instagram.com/wilg.mit">
+                            <img src="{% static 'wilg_website/images/icons/insta_icon.svg' %}" alt="wilgstagram"
+                                width="25" height="25">
+                        </a>
+                    </li>
+                    <li class="mx-4"><a href="mailto:wilg-rush-chairs@mit.edu"><img
+                                src="{% static 'wilg_website/images/icons/mail_icon.svg' %}" alt="wilg-mail" width="25"
+                                height="25"></a>
+                    </li>
+                    <li class="mx-4"><a href="https://github.com/lvcyklm02/wilg"><img
+                                src="{% static 'wilg_website/images/icons/github_icon.svg' %}" alt="repo" width="25"
+                                height="25"></a>
+                    </li>
+                </ul>
+
+            </nav>
+            <p>
+                &copy; 2024 Lucy Kim
+            </p>
+        </footer>
+    </div>
 </body>
 
 </html>
