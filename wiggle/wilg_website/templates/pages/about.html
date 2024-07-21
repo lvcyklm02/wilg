@@ -1,11 +1,24 @@
 <!-- about.html -->
 {% extends 'pages/base.html' %}
+{% load static %}
 
 {% block title %}About - WILG{% endblock %}
 
 {% block content %}
 <h1>About Us</h1>
-<p>The Women's Independent Living Group (WILG) is one of the few all-women housing options at MIT. We're an independent
+<p class="py-4">
+    The Women's Independent Living Group (WILG) is one of the few all-women housing options at MIT. We're an independent
     living group that houses about 45 residents. WILG was founded with the belief that a group of hard-working women can
-    manage their own house, and we've been doing just that for almost 40 years.</p>
+    manage their own house, and we've been doing just that for almost 40 years.
+</p>
+<div>
+    <img src="{% static 'wilg_website/images/pages/rush_dinner.jpg' %}" alt="wilg rush" width="100%">
+    <caption>Rush Dinner (Spring 2024) </caption>
+</div>
+
+<h2>Meet the House</h2>
+<h3>Exec</h3>
+
+<h3>Members</h3>
+
 {% endblock %}

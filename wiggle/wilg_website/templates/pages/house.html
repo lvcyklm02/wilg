@@ -1,23 +1,74 @@
 <!-- home.html -->
 {% extends 'pages/base.html' %}
+{% load static %}
 
 {% block title %}House - WILG{% endblock %}
 
 {% block content %}
 <h1>Our House</h1>
-<h2>Floor 5</h2>
-<p>Insert pic here</p>
-<h2>Floor 4</h2>
-<p>Insert pic here</p>
-<h2>Floor 3</h2>
-<p>Insert pic here</p>
-<h2>Floor 2</h2>
-<p>Insert pic here</p>
-<h2>Floor 1</h2>
-<p>Insert pic here</p>
-<h2>Basement</h2>
-<p>Insert pic here</p>
+<div class="flex flex-wrap">
+    <div class="w-full md:w-1/2">
+        <h2>Ammenities</h2>
+        <p>We house 45 residents in singles, doubles, and triples across 5 floors.</p>
+        <p>WILG has many amenities: a full commercial kitchen, a secondary kitchen on the fourth floor, ample appliances
+            and dishware, wifi, free laundry, a bike storage room, and air-conditioned lounges.</p>
 
-<h2>House Rules</h2>
+        <h2>Location</h2>
+        <p>We're located conveniently between Central Square and Kendall Square, WILG offers quick access to the best of
+            Cambridge and Boston. </p>
+        <ul class="list-disc list-inside">
+            <li>0 seconds from the 1 Bus stop</li>
+            <li>1 minute from 3 BlueBike stations</li>
+            <li>6 minutes from the Central Square Red Line station</li>
+            <li>10 minutes from the MIT campus</li>
+            <li>15 minutes from Kendall Square</li>
+        </ul>
+        <p>We have easy access to grocery stores, restaurants, and MIT and Harvard campuses.</p>
+
+        <p>We have a beautiful mural on the wall of the house, painted by IMAGINE <a
+                href="https://www.instagram.com/imagine864/">@imagine864</a>.</p>
+
+
+        <h2>House Rules</h2>
+        <p>All residents commit to keeping the house clean and tidy, with two hours of chores a week.</p>
+        <p>We have a strict no-mammalian-pet policy, due to allergies.</p>
+
+    </div>
+    <div class="w-full md:w-1/2">
+        <img src="{% static 'wilg_website/images/pages/mural.jpg' %}" alt="wilg mural">
+        <caption>Photo by Oron Nomboor <a href="https://www.instagram.com/grain_and_pixel/">@grain_and_pixel</a>, Feb
+            2024</caption>
+    </div>
+
+    <h2>Food</h2>
+    <p>Our pantries and beverage fridge is always stocked
+        with snacks from Costco, and we take turns cooking dinner, so that six days a week, our members and boarders
+        are guaranteed a home-cooked meal.</p>
+
+    <h2>Tour</h2>
+    <p>We're happy to give tours of the house to anyone interested in joining the community. Please email us at <a
+            href="mailto:wilg-rush-chairs@mit.edu">wilg-rush-chairs@mit.edu</a> to schedule a tour.</p>
+
+    <div class="flex flex-wrap">
+        <div class="md:w-[30%] mx-2">
+            <img src="{% static 'wilg_website/images/pages/maya_bike_2024.jpeg' %}" alt="maya on bike">
+            <caption>Photo by Lucy K (co' 2025) </caption>
+        </div>
+        <div class="md:w-[30%] mx-2">
+            <img src="{% static 'wilg_website/images/pages/maya_bike_2024.jpeg' %}" alt="maya on bike">
+            <caption>Photo by Lucy K (co' 2025) </caption>
+        </div>
+        <div class="md:w-[30%] mx-2">
+            <img src="{% static 'wilg_website/images/pages/maya_bike_2024.jpeg' %}" alt="maya on bike">
+            <caption>Photo by Lucy K (co' 2025) </caption>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
 
 {% endblock %}

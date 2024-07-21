@@ -1,9 +1,14 @@
 <!-- home.html -->
 {% extends 'pages/base.html' %}
+{% load static %}
 
 {% block title %}Home - WILG{% endblock %}
 
 {% block content %}
-<h1>Women's Independent Living Group</h1>
-<p>Insert pic here</p>
+<div>
+    <img src="{% static 'wilg_website/images/pages/wilgrainbow_2024.jpg' %}" alt="wilg house" width="100%">
+    <caption>WILG by Maya R. (co 2024) in 2023</caption>
+</div>
+
+
 {% endblock %}
