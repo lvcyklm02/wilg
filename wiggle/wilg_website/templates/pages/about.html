@@ -27,7 +27,7 @@
 
 {% for member in members %}
 {% if member.id in id %}
-<p>{{ member.name }} - {{ member.classyear }}</p>
+{% include 'cards/member.html' with member=member %}
 {% endif %}
 {% endfor %}
 
@@ -38,7 +38,7 @@
 <h3>Members</h3>
 {% for member in members %}
 {% if member.exec_position == "MEMBER" %}
-<p>{{ member.name }} - {{ member.classyear }}</p>
+{% include 'cards/member.html' with member=member %}
 {% endif %}
 {% endfor %}
 {% endblock %}

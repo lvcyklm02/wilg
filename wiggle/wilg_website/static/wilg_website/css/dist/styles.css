@@ -604,11 +604,38 @@ a:hover {
 .table {
   display: table;
 }
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+.h-24 {
+  height: 6rem;
+}
 .w-3\/4 {
   width: 75%;
 }
 .w-full {
   width: 100%;
+}
+.w-24 {
+  width: 6rem;
+}
+.w-48 {
+  width: 12rem;
+}
+.w-\[30\%\] {
+  width: 30%;
+}
+.w-\[100px\] {
+  width: 100px;
+}
+.w-\[25\%\] {
+  width: 25%;
+}
+.w-\[100\%\] {
+  width: 100%;
+}
+.w-\[80\%\] {
+  width: 80%;
 }
 .min-w-24 {
   min-width: 6rem;
@@ -636,6 +663,16 @@ a:hover {
 }
 .justify-center {
   justify-content: center;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-\[50\%\] {
+  border-radius: 50%;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .py-4 {
   padding-top: 1rem;
