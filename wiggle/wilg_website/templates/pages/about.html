@@ -17,8 +17,28 @@
 </div>
 
 <h2>Meet the House</h2>
-<h3>Exec</h3>
+
+<h3>Executive Board</h3>
+{% for exec in execs %}
+{% for position, id in positions.items %}
+{% if exec.name == position and exec.name != "MEMBER" %}
+
+<p>{{ exec.value }}</p>
+
+{% for member in members %}
+{% if member.id in id %}
+<p>{{ member.name }} - {{ member.classyear }}</p>
+{% endif %}
+{% endfor %}
+
+{% endif %}
+{% endfor %}
+{% endfor %}
 
 <h3>Members</h3>
-
+{% for member in members %}
+{% if member.exec_position == "MEMBER" %}
+<p>{{ member.name }} - {{ member.classyear }}</p>
+{% endif %}
+{% endfor %}
 {% endblock %}
